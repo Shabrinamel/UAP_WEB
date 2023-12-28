@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Kasir</title>
+        <body>
+
+            <div class="container mt-4">
+                <h2>List Barang</h2>
+        
+                <table class="table table-bordered table-striped bg-white text-black">
+                    <thead>
+                        <tr>
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="001">001</td>
+                            <td>Barang A</td>
+                            <td id="harga">10.000</td>
+                        </tr>
+                        <tr>
+                            <td id="002">002</td>
+                            <td>Barang B</td>
+                            <td id="harga">20.000</td>
+                        </tr>
+                        <tr>
+                            <td id="003">003</td>
+                            <td>Barang C</td>
+                            <td id="harga">30.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+                <div class="input-container">
+                    <div class="container mt-4">
+                        <h2>Masukkan barang</h2>
+                        <table class="table table-bordered table-striped bg-white text-black">
+                            <thead>
+                                <tr>
+                                    <th for="Kode">Kode Barang:</th>
+                                    <th>
+                                    <input type="text" id="kode" placeholder="Masukkan kode">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th for="Jumlah">Banyak Barang:</th>
+                                    <th>
+                                    <input type="text" id="jumlah" placeholder="Masukkan jumlah">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                    <button onclick="Submit()">Submit</button>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </head>
+
+    <script>
+    function Submit() {
+        var harga = document.getElementById("harga").getElementsByid("kode").value;
+        var jumlah = document.getElementById("jumlah").value;
+        var hasil = harga * jumlah;
+        try {
+            document.getElementById("kode").value = hasil;
+            alert("Total: " + hasil);
+        } catch (error) {
+            alert("Error!");
+            clearDisplay();
+        }
+    }
+    </script>
+
+</html>
+
+
+
